@@ -29,13 +29,4 @@ class Client:
         self.api.run()
 
 
-if __name__ == "__main__":
-    from client_api import API
-    from client_cli import CLI
-    server_address = 'uds_socket'
-    conf = ''
-    cli = CLI(conf)
-    api = API(cli)
-    c = Client(server_address, api)
-    c.start()
 
