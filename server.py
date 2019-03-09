@@ -33,6 +33,9 @@ class Server:
 
 if __name__ == "__main__":
     from server_api import API
+    from server_handler import Handler
     address = './uds_socket'
+    conf = ''
+    API.handler = Handler(conf)
     s = Server(address, API)
     s.start()

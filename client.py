@@ -25,13 +25,17 @@ class Client:
         self.run()
 
     def run(self):
-        fn = self.api(self.sock)
-        fn.run()
+        self.api.setCommunication(self.sock)
+        self.api.run()
 
 
 if __name__ == "__main__":
     from client_api import API
+    from client_cli import CLI
     server_address = 'uds_socket'
-    c = Client(server_address, API)
+    conf = ''
+    cli = CLI(conf)
+    api = API(cli)
+    c = Client(server_address, api)
     c.start()
 

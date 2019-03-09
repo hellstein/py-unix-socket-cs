@@ -1,22 +1,21 @@
+from client_cli import CLI
+import json
 class API:
-    def __init__(self, sock):
+    def __init__(self, cli):
+        self.cli = cli
+
+    def setCommunication(self, sock):
         self.sock = sock
 
     def run(self):
-        try:
-            # Send data
-            message = b'This is the message. It will be repeat.'
-            print('sending {!r}'.format(message))
-            self.sock.sendall(message)
-
-            amount_received = 0
-            amount_expected = len(message)
-
-            while amount_received < amount_expected:
-                data = self.sock.recv(16)
-                amount_received += len(data)
-                print('received {!r}'.format(data))
-        finally:
-            print('closing socket')
-            self.sock.close()
+        order = vars(self.cli.parse())
+        cmd = json.dumps(order).encode()
+        message = bytes([len(cmd)]) + cmd
+        print('sending {!r}'.format(message))
+        self.sock.sendall(message)
+        datalen = int.from_bytes(self.sock.recv(1), byteorder='big')
+        data = self.sock.recv(datalen)
+        print(data)
+        print('closing socket')
+        self.sock.close()
 
