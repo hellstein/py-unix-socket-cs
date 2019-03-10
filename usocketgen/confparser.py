@@ -11,5 +11,4 @@ class Parser:
 
     def parse(self):
         with open(self.conf, 'r') as f:
-            data = json.load(f)
-            print(data)
+            self.info = json.load(f)

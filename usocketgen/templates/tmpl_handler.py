@@ -4,5 +4,6 @@ import json
 class Logic(Handler):
     def process(self, data):
         order = json.loads(data)
-        print(order['cmd'])
-        return b'8whataday'
+        action = getattr(self, order['cmd'])
+        return action(order['args'])
+

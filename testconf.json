@@ -1,0 +1,8 @@
+{
+    "client_prog_name": "routing",
+    "server_address": "./uds_server",
+    "features": {
+        "start": [],
+        "stop": []
+    } 
+}

@@ -14,4 +14,4 @@ uninstall:
 	python3 -m pip uninstall usocketgen
 
 generate:
-	python3 -m usocketgen.genapp --conf conf.json --app app
+	python3 -m usocketgen.genapp --conf testconf.json --app app
