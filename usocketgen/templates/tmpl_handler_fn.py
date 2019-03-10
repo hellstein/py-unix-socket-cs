@@ -1,2 +1,4 @@
     def {{ action }}(self, args):
-        return b'result of {{ action }}'
+        message = "result of {{ action }}"
+        return self._formdata(message)
+

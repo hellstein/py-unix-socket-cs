@@ -33,17 +33,17 @@ class CodeGener:
         self.codeinfo['app_server.py'] = code
 
     def _gen_ui_subparser(self):
-        subparser_code = '\n'.join([self.tmpl['ui_subparser'].render(cmd=cmd) for cmd in self.info['features'].keys()]) + '\n'
+        subparser_code = '\n'.join([self.tmpl['ui_subparser'].render(cmd=cmd) for cmd in self.info['features']]) + '\n'
         return subparser_code
 
     def gen_ui(self):
-        ui_code = self.tmpl['ui'].render(server_address=self.info['server_address']) + '\n'
+        ui_code = self.tmpl['ui'].render(client_prog_name=self.info['client_prog_name']) + '\n'
         subparser_code = self._gen_ui_subparser()
         code = '\n'.join([ui_code, subparser_code]) + '\n' 
         self.codeinfo['ui.py'] = code
 
     def _gen_handler_fn(self):
-        handler_fn_code = '\n'.join([self.tmpl['handler_fn'].render(action=cmd) for cmd in self.info['features'].keys()]) + '\n'
+        handler_fn_code = '\n'.join([self.tmpl['handler_fn'].render(action=cmd) for cmd in self.info['features']]) + '\n'
         return handler_fn_code 
 
     def gen_handler(self):

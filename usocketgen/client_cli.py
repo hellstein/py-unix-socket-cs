@@ -7,5 +7,8 @@ class CLI:
         self.parser = parser
 
     def parse(self):
-        args = self.parser.parse_args()
-        return args
+        r = vars(self.parser.parse_args())
+        cmd = r['cmd']
+        del r['cmd']
+        order = {'cmd': cmd, 'args': r}
+        return order

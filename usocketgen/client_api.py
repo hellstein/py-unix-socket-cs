@@ -7,7 +7,7 @@ class API:
         self.sock = sock
 
     def run(self):
-        order = vars(self.cli.parse())
+        order = self.cli.parse()
         cmd = json.dumps(order).encode()
         message = bytes([len(cmd)]) + cmd
         print('sending {!r}'.format(message))

@@ -12,3 +12,9 @@ class Parser:
     def parse(self):
         with open(self.conf, 'r') as f:
             self.info = json.load(f)
+            if 'server_address' not in self.info.keys() or self.info['server_address'] == '':
+                self.info['server_address'] = './uds_server'
+            if 'client_prog_name' not in self.info.keys() or self.info['client_prog_name'] == '':
+                self.info['client_prog_name'] = 'uds client'
+            if 'features' not in self.info.keys() or not isinstance(self.info['features'], list):
+                self.info['features'] = []

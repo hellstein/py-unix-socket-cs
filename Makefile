@@ -2,6 +2,7 @@ clean:
 	rm -rf build dist *.egg-info __pycache__ usocketgen/__pycache__ app
 
 pack:
+	vim setup.py
 	python3 setup.py sdist bdist_wheel
 
 upload:
@@ -15,3 +16,8 @@ uninstall:
 
 generate:
 	python3 -m usocketgen.genapp --conf testconf.json --app app
+
+
+update: clean pack upload
+
+test: install generate

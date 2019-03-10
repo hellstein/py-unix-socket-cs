@@ -1,11 +1,11 @@
 import setuptools
-
+V = "0.0.20"
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="usocketgen",
-    version="0.0.8",
+    version=V,
     author="phoenix.lv",
     author_email="phoenix.grey0108@gmail.com",
     description="lib and code generator to create unix domain socket server and client",
