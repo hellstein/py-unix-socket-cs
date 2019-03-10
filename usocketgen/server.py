@@ -2,10 +2,13 @@
 import socket
 import sys
 import os
+from .server_api import API
+from .server_handler import Handler
 
 class Server:
-    def __init__(self, address, api):
-        self.address, self.api = address, api
+    def __init__(self, address, handler=Handler()):
+        API.handler = handler
+        self.address, self.api = address, API
         # Make sure the socket does not already exist
         try:
              os.unlink(self.address)

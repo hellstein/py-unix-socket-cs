@@ -3,13 +3,13 @@
 import socket
 import sys
 import datetime
-
+from .client_api import API
 
 
 class Client:
-    def __init__(self, server_address, api, client_address=None):
+    def __init__(self, server_address, cli, client_address=None):
         self.server_address, self.client_address = server_address, client_address
-        self.api = api
+        self.api = API(cli)
 
     def start(self):
         # Create a UDS socket

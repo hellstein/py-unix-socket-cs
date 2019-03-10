@@ -1,4 +1,3 @@
-from client_cli import CLI
 import json
 class API:
     def __init__(self, cli):
