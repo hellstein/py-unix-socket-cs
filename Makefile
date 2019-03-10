@@ -1,5 +1,5 @@
 clean:
-	rm -rf build dist
+	rm -rf build dist *.egg-info __pycache__ usocketgen/__pycache__ app
 
 pack:
 	python3 setup.py sdist bdist_wheel
@@ -13,3 +13,5 @@ install:
 uninstall:
 	python3 -m pip uninstall usocketgen
 
+generate:
+	python3 -m usocketgen.genapp --conf conf.json --app app

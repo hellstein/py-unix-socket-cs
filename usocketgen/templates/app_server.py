@@ -1,4 +1,4 @@
-from handler import Logic
+from .handler import Logic
 from usocketgen.server import Server
 
 if __name__ == "__main__":

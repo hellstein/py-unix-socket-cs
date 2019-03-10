@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="usocketgen",
-    version="0.0.4",
+    version="0.0.8",
     author="phoenix.lv",
     author_email="phoenix.grey0108@gmail.com",
     description="lib and code generator to create unix domain socket server and client",
