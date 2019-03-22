@@ -18,7 +18,7 @@ Please check the [github page](https://hellstein.github.io/unix-socket-cs) for t
 
 # How to contribute
 * Please check the [github page](https://hellstein.github.io/unix-socket-cs) for this project.
-* Join the [gitter](https://gitter.im/hellstein/community)
+* Join the [gitter](https://gitter.im/unix-socket-cs/community)
 
 # Logistics
 ### Code of conduct
