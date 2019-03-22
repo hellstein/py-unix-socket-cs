@@ -1,3 +1,7 @@
+GITBOOK = $(CURDIR)/gitbook
+DOCS = $(CURDIR)/docs
+
+.PHONY: clean pack upload install uninstall generate update test
 clean:
 	rm -rf build dist *.egg-info __pycache__ usocketgen/__pycache__ app
 
@@ -21,3 +25,11 @@ generate:
 update: clean pack upload
 
 test: install generate
+
+
+.PHONY: mk-book clean-book
+mk-book: gitbook
+	gitbook build $(GITBOOK) $(DOCS)
+
+clean-book: $(DOCS)
+	rm -rf $(DOCS)/*

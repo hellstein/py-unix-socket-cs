@@ -2,20 +2,34 @@
 
 ### Clone the project
 ```
-git clone [url]
+git clone https://github.com/hellstein/unix-socket-cs.git
 ```
 
 ### Install dependencies
+* `python3`
+* `pip3`
+
+### Create python package for testing
 ```
-[code to install dependencies]
+cd unix-socket-cs
+make update
 ```
 
-### Start and stop service
+### Generate unix socket applcation
 ```
-[code to start and stop service]
+make test
+```
+The application `app` is generated according to `testconfig.json`.
+
+### Test the application
+* Start server in one terminal
+```
+cd app
+python3 app_server.py
 ```
 
-### Clean the development environment
+* Start client in another terminal
 ```
-[code to clean dev env]
+cd app
+python3 app_client.py
 ```
