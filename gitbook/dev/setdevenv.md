@@ -16,7 +16,7 @@ make dev-update
 ```
 * We use the PyPI test repo for development, you can check `Makefile` to see the build and test process.
 * If you need knowledge how the python package works, please do read [Packaging Python Projects](https://packaging.python.org/tutorials/packaging-projects/).
-* The python package has been built and uploaded into [test.pypi.org](https://test.pypi.org/manage/project/usocketgen/releases/).
+* The python package has been built and uploaded into [test.pypi.org](https://test.pypi.org/project/usocketgen/#history).
 
 ### Generate unix socket applcation
 ```
