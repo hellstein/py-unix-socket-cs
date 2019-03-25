@@ -12,6 +12,9 @@ script:
 - make build VERSION=$TRAVIS_TAG
 deploy:
 - provider: pypi
+  on:
+      tags: true
+      all_branches: true
   username: phoenix.lv
   password:
     secure: s4ykjkF1RiW65IpMHRhg9Ih4452dOUZxXqo96OJJGqwupL+ChipQMr9YmT9pabMBkcP1Bo5r/ldgKDmXLqKRpKFAEGJRBsjLdn9zUl5R1Q60RPYZhk+Jte2hQZ+I8zzIrAdNaQkIUGfLp9LQ2R2VIdiHIygh+YTS/NMoLSgmy9zCM5ahdAQHKtfbnvU43vMUgk5T6X8C2+eqM+qQ/8SxJ+q2fsYDH7bJ7+lIguWTzn0GF8N9Wx5HmoddxMUFsDRSl669Jlk2JkuJQ+30xgDan03KtfRnaSIYuDPjVn2iZJvGhF95MIYOOMdNdmjCc5XnWBLRI1MpUGTE5McRS9RLBlRImNf2CPDyQC5mG+BzffGRvZVHQBMD/lZjE3/CjwG+B0B/F1K8ow3R7WG2vnKV+CBm+FaKGt9niv9qL5h1A4+lwZGoA0HGdmxswxNtY0H+t8XIYwx9DEqM+f/BHRr5zLQKnGjL7pv4/eYtgDfPs/PLP9UH1PVu1m4ZlJIsw/WClmWnxGBLcKkhTW7NTUqrYsCIZ+6U5a/KE6SwhaoZgfqmtxUWaR6AiRPhzBRrRQbAo3QKX7SmbPhFoTfFnd4C6h33FBmDBp1LObIq5VcfA+svWS7ZuR+XBRYVFc/2CWlKDhrnvVcoXOTslUUGOJtb65p9dZua2WKe3+mpisDINAw=
