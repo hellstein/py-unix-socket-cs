@@ -12,6 +12,7 @@ script:
 - make build VERSION=$TRAVIS_TAG
 deploy:
 - provider: pypi
+  skip_cleanup: true
   on:
       tags: true
       all_branches: true
