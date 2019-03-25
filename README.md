@@ -2,9 +2,9 @@
   <img width="250" src="LOGO">
 </p>
 
-<h1 align="center"> Project Title </h1>
+<h1 align="center"> Unix Socket higher-level lib </h1>
 <p align="center">
-  <b >One Paragraph of project description goes here</b>
+  <b>Framework of unix socket for creating a client-server pair</b>
 </p>
 <br>
 

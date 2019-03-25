@@ -12,14 +12,15 @@ git clone https://github.com/hellstein/unix-socket-cs.git
 ### Create python package for testing
 ```
 cd unix-socket-cs
-make update
+make dev-update
 ```
 * We use the PyPI test repo for development, you can check `Makefile` to see the build and test process.
 * If you need knowledge how the python package works, please do read [Packaging Python Projects](https://packaging.python.org/tutorials/packaging-projects/).
+* The python package has been built and uploaded into [test.pypi.org](https://test.pypi.org/manage/project/usocketgen/releases/).
 
 ### Generate unix socket applcation
 ```
-make test
+make dev-test
 ```
 * The application `app` is generated according to `testconfig.json`.
 * The cli commands and handler functions are defined in `testconfig.json`.
