@@ -12,7 +12,7 @@ git clone https://github.com/hellstein/unix-socket-cs.git
 ### Create python package for testing
 ```
 cd unix-socket-cs
-make prod-update
+make update
 ```
 * We use the PyPI repo for development, you can check `Makefile` to see the build and test process.
 * If you need knowledge how the python package works, please do read [Packaging Python Projects](https://packaging.python.org/tutorials/packaging-projects/).
@@ -20,7 +20,7 @@ make prod-update
 
 ### Generate unix socket applcation
 ```
-make prod-test
+make test
 ```
 * The application `app` is generated according to `testconfig.json`.
 * The cli commands and handler functions are defined in `testconfig.json`.
