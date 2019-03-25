@@ -1,5 +1,6 @@
 GITBOOK = $(CURDIR)/gitbook
 DOCS = $(CURDIR)/docs
+PKG = usocketgen
 
 .PHONY: install-deps
 install-deps:
@@ -7,10 +8,10 @@ install-deps:
 
 .PHONY: uninstall clean
 uninstall:
-	pip3 uninstall usocketgen || true
+	pip3 uninstall $(PKG) || true
 
 clean: uninstall
-	rm -rf build dist *.egg-info __pycache__ usocketgen/__pycache__ app
+	rm -rf build dist *.egg-info __pycache__ $(PKG)/__pycache__ app
 
 .PHONY: dev-config config
 dev-config:
@@ -28,17 +29,17 @@ dev-upload:
 	python3 -m twine upload --repository-url https://test.pypi.org/legacy/ dist/*
 
 dev-install:
-	python3 -m pip install --no-cache-dir --index-url https://test.pypi.org/simple/ --no-deps usocketgen
+	python3 -m pip install --no-cache-dir --index-url https://test.pypi.org/simple/ --no-deps $(PKG) 
 
 upload:
 	python3 -m twine upload dist/*
 
 install:
-	pip3 install usocketgen
+	pip3 install $(PKG) 
 
 .PHONY: generate
 generate:
-	python3 -m usocketgen.genapp --conf testconf.json --app app
+	python3 -m $(PKG).genapp --conf testconf.json --app app
 
 .PHONY: dev-build dev-update build update dev-test test
 dev-build: clean dev-config pack
@@ -47,7 +48,7 @@ dev-update:  dev-build dev-upload
 build: clean config pack
 update: build upload
 
-dev-test: install-from-test generate
+dev-test: dev-install generate
 test: install generate
 
 .PHONY: mk-book clean-book
