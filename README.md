@@ -8,7 +8,7 @@
 </p>
 <br>
 
-[![GitHub release](https://img.shields.io/github/release/hellstein/unix-socket-cs.svg)](https://github.com/hellstein/unix-socket-cs/releases)
+[![GitHub release](https://img.shields.io/github/release/hellstein/unix-socket-cs.svg)](https://github.com/hellstein/unix-socket-cs/releases) [![Join the chat at https://gitter.im/unix-socket-cs/community](https://badges.gitter.im/unix-socket-cs/community.svg)](https://gitter.im/unix-socket-cs/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 ![Github All Releases](https://img.shields.io/github/downloads/hellstein/unix-socket-cs/total.svg)
 ![Travis (.org) branch](https://img.shields.io/travis/hellstein/unix-socket-cs/BRANCH.svg)
 ![GitHub](https://img.shields.io/github/license/hellstein/unix-socket-cs.svg)
