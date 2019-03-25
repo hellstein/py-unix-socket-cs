@@ -1,10 +1,13 @@
-language: generic
+language: python 
+python:
+    - "3.6"
 sudo: required
 dist: trusty
 branches:
   only:
   - "/^\\d+\\.\\d+(\\.\\d+)?(-\\S*)?$/"
-install: true
+install:
+- make install-deps
 script:
 - make build VERSION=$TRAVIS_TAG
 deploy:

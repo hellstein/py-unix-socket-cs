@@ -1,6 +1,10 @@
 GITBOOK = $(CURDIR)/gitbook
 DOCS = $(CURDIR)/docs
 
+.PHONY: install-deps
+install-deps:
+	python3 -m pip install --user --upgrade setuptools wheel twine
+
 .PHONY: uninstall clean
 uninstall:
 	pip3 uninstall usocketgen || true
