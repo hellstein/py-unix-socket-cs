@@ -11,7 +11,7 @@ uninstall:
 	pip3 uninstall $(PKG) || true
 
 clean: uninstall
-	rm -rf build dist *.egg-info __pycache__ $(PKG)/__pycache__ app
+	rm -rf build dist *.egg-info __pycache__ $(PKG)/__pycache__ example/__pycache__ example/uds_server
 
 .PHONY: dev-config config
 dev-config:

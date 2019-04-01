@@ -1,3 +1,0 @@
-{
-    "features": ["start", "stop", "install", "uninstall", "version", "status"]
-}
