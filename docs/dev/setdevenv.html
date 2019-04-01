@@ -261,34 +261,30 @@
                                 
                                 <h1 id="how-to-set-development-environment-">How to set development environment ?</h1>
 <h3 id="clone-the-project">Clone the project</h3>
-<pre><code>git clone https://github.com/hellstein/unix-socket-cs.git
+<pre><code>git clone https://github.com/hellstein/py-unix-socket-cs.git
 </code></pre><h3 id="install-dependencies">Install dependencies</h3>
 <ul>
 <li><code>python3</code></li>
 <li><code>pip3</code></li>
 </ul>
 <h3 id="create-python-package-for-testing">Create python package for testing</h3>
-<pre><code>cd unix-socket-cs
+<pre><code>cd py-unix-socket-cs
 make dev-update
 </code></pre><ul>
 <li>We use the PyPI test repo for development, you can check <code>Makefile</code> to see the build and test process.</li>
 <li>If you need knowledge how the python package works, please do read <a href="https://packaging.python.org/tutorials/packaging-projects/" target="_blank">Packaging Python Projects</a>.</li>
-<li>The python package has been built and uploaded into <a href="https://test.pypi.org/project/usocketgen/#history" target="_blank">test.pypi.org</a>.</li>
+<li>The python package has been built and uploaded into <a href="https://test.pypi.org/project/unixsocketcs/#history" target="_blank">test.pypi.org</a>.</li>
 </ul>
-<h3 id="generate-unix-socket-applcation">Generate unix socket applcation</h3>
+<h3 id="install-dependency-from-testpypiorg">Install dependency from <a href="https://test.pypi.org/project/unixsocketcs/#history" target="_blank">test.pypi.org</a>.</h3>
 <pre><code>make dev-test
-</code></pre><ul>
-<li>The application <code>app</code> is generated according to <code>testconfig.json</code>.</li>
-<li>The cli commands and handler functions are defined in <code>testconfig.json</code>.</li>
-</ul>
-<h3 id="test-the-application">Test the application</h3>
+</code></pre><h3 id="test-the-application">Test the application</h3>
 <ul>
 <li><p>Start server in one terminal</p>
-<pre><code>cd app
+<pre><code>cd example
 python3 app_server.py
 </code></pre></li>
 <li><p>Start client in another terminal</p>
-<pre><code>cd app
+<pre><code>cd example
 python3 app_client.py [cmd]
 </code></pre></li>
 <li><code>cmd</code> is the cli command defined in <code>testconfig.json</code>.</li>
@@ -337,7 +333,7 @@ python3 app_client.py [cmd]
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"How to set dev environment","level":"3.1","depth":1,"next":{"title":"How to build locally","level":"3.2","depth":1,"path":"dev/localbuild.md","ref":"dev/localbuild.md","articles":[]},"previous":{"title":"Deployment","level":"2.2","depth":1,"path":"qs/deployment.md","ref":"qs/deployment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dev/setdevenv.md","mtime":"2019-03-25T02:02:09.458Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-25T06:23:18.759Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"How to set dev environment","level":"3.1","depth":1,"next":{"title":"How to build locally","level":"3.2","depth":1,"path":"dev/localbuild.md","ref":"dev/localbuild.md","articles":[]},"previous":{"title":"Deployment","level":"2.2","depth":1,"path":"qs/deployment.md","ref":"qs/deployment.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dev/setdevenv.md","mtime":"2019-04-01T08:03:57.488Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-01T08:05:43.388Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

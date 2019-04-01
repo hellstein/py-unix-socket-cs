@@ -2,7 +2,7 @@
 
 ### Clone the project
 ```
-git clone https://github.com/hellstein/unix-socket-cs.git
+git clone https://github.com/hellstein/py-unix-socket-cs.git
 ```
 
 ### Install dependencies
@@ -11,30 +11,28 @@ git clone https://github.com/hellstein/unix-socket-cs.git
 
 ### Create python package for testing
 ```
-cd unix-socket-cs
+cd py-unix-socket-cs
 make dev-update
 ```
 * We use the PyPI test repo for development, you can check `Makefile` to see the build and test process.
 * If you need knowledge how the python package works, please do read [Packaging Python Projects](https://packaging.python.org/tutorials/packaging-projects/).
-* The python package has been built and uploaded into [test.pypi.org](https://test.pypi.org/project/usocketgen/#history).
+* The python package has been built and uploaded into [test.pypi.org](https://test.pypi.org/project/unixsocketcs/#history).
 
-### Generate unix socket applcation
+### Install dependency from [test.pypi.org](https://test.pypi.org/project/unixsocketcs/#history).
 ```
 make dev-test
 ```
-* The application `app` is generated according to `testconfig.json`.
-* The cli commands and handler functions are defined in `testconfig.json`.
 
 ### Test the application
 * Start server in one terminal
 ```
-cd app
+cd example
 python3 app_server.py
 ```
 
 * Start client in another terminal
 ```
-cd app
+cd example
 python3 app_client.py [cmd] 
 ```
 * `cmd` is the cli command defined in `testconfig.json`.
