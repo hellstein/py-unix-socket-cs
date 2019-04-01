@@ -1,6 +1,6 @@
 GITBOOK = $(CURDIR)/gitbook
 DOCS = $(CURDIR)/docs
-PKG = usocketgen
+PKG = unixsocketcs
 
 .PHONY: install-deps
 install-deps:
@@ -37,10 +37,6 @@ upload:
 install:
 	pip3 install $(PKG) 
 
-.PHONY: generate
-generate:
-	python3 -m $(PKG).genapp --conf testconf.json --app app
-
 .PHONY: dev-build dev-update build update dev-test test
 dev-build: clean dev-config pack
 dev-update:  dev-build dev-upload
@@ -48,8 +44,8 @@ dev-update:  dev-build dev-upload
 build: clean config pack
 update: build upload
 
-dev-test: dev-install generate
-test: install generate
+dev-test: dev-install
+test: install
 
 .PHONY: mk-book clean-book
 mk-book: gitbook
